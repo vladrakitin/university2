@@ -29,10 +29,6 @@ namespace ConsoleApp1
             {
                 double t = Math.Cos(Math.Log10(3 * xMin / xMax));
 
-                // double y = (t * t) / (45 + 3 * xMin);
-                // Console.WriteLine("x = {0} \t\t y = {1}", x, y);
-
-
                 if (Math.Abs(x - xMax - dx) > 0.0001)
                 {
                     double y = ((t * t) / (45 + 3 * xMin));

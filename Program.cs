@@ -4,45 +4,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace ConsoleApp2
 {
     class Program
     {
+        private static string sx1Min;
+
         static void Main(string[] args)
         {
-            Console.Write("Введіть початкове значення Xmin: ");
-            string sxMin = Console.ReadLine();
-            double xMin = Double.Parse(sxMin);
+            Console.Write("Введіть початкове значення X1min:");
+            string sx1min = Console.ReadLine();
+            double x1Min = Double.Parse(sx1Min);
 
-            Console.Write("Введіть кінцеве значення Xmax: ");
-            string sxMax = Console.ReadLine();
-            double xMax = Double.Parse(sxMax);
+            Console.Write("Введіть початкове значення X1max:");
+            string sx1Max = Console.ReadLine();
+            double x1Max = Double.Parse(sx1Min);
 
-            Console.Write("Введіть приріст dX: ");
-            string sdx = Console.ReadLine();
-            double dx = double.Parse(sdx);
+            Console.Write("Введіть приріст dx1: ");
+            string sdx1 = Console.ReadLine();
+            double dx1 = double.Parse(sdx1);
 
-            double x = xMin;
-            double z = xMax;
-            
-            while (x <= xMax)
-            {
-                double t = Math.Cos(Math.Log10(3 * xMin / xMax));
+            Console.Write("Введіть початкове значення X2min:");
+            string sx2min = Console.ReadLine();
+            double x2Min = Double.Parse(sx1Min);
 
-                if (Math.Abs(x - xMax - dx) > 0.0001)
-                {
-                    double y = ((t * t) / (45 + 3 * xMin));
-                    Console.WriteLine("x = {0}\t\t y = {1}", xMax, y);
-                    x += dx;
-                }
+            Console.Write("Введіть початкове значення X2max:");
+            string sx2Max = Console.ReadLine();
+            double x2Max = Double.Parse(sx1Min);
 
-                
-
-            }
-
-            Console.ReadKey();
+            Console.Write("Введіть приріст dx2: ");
+            string sdx2 = Console.ReadLine();
+            double dx2 = double.Parse(sdx2);
+            double y;
+            double x1 = x1Min;
+            double x2;
         }
-
-
     }
 }
